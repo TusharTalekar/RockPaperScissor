@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:500px)" href="phone.css">
     <title>Document</title>
 </head>
 
 <body>
     <p class="title">Rock Paper Scissors</p>
-    <button class="play-button" onclick="play('rock')">
-        <img src="rock-emoji.png" alt="">
-    </button>
-    <button class="play-button" onclick="play('paper')">
-        <img src="paper-emoji.png" alt="">
-    </button>
-    <button class="play-button" onclick="play('scissor')">
-        <img src="scissor-emoji.png" alt="">
-    </button>
+    <div class="container">
+        <button class="play-button" onclick="play('rock')">
+            <img src="rock-emoji.png" alt="">
+        </button>
+        <button class="play-button" onclick="play('paper')">
+            <img src="paper-emoji.png" alt="">
+        </button>
+        <button class="play-button" onclick="play('scissor')">
+            <img src="scissor-emoji.png" alt="">
+        </button>
+    </div>
 
     <p id="result"></p>
     <p id="choices"></p>
     <p id="score">Wins:0,Losses:0,Tie:0</p>
-    
+
     <button class="btn" onclick="
         score.win=0;
         score.loss=0;
@@ -39,12 +42,12 @@
         tie: 0
     };
     showResult();
-    
+
     function play(userChoice) {
         const computerChoice = randomChoice();
         const result = getResult(computerChoice, userChoice);
-        showResult(result,computerChoice,userChoice);
-        localStorage.setItem('score',JSON.stringify(score));
+        showResult(result, computerChoice, userChoice);
+        localStorage.setItem('score', JSON.stringify(score));
     }
 
     function randomChoice() {
@@ -82,8 +85,8 @@
         // alert(`Your pickek ${userChoice}.Computer picked ${computerChoice}.${result}.`);
     }
 
-    function showResult(result,computerChoice,userChoice){
-        document.getElementById("result").innerHTML = result?`${result}` : '';
+    function showResult(result, computerChoice, userChoice) {
+        document.getElementById("result").innerHTML = result ? `${result}` : '';
         document.getElementById("choices").innerHTML = computerChoice ? `You <img src="${userChoice}-emoji.png" alt=""> <img src="${computerChoice}-emoji.png" alt=""> computer` : '';
         document.getElementById("score").innerHTML = `Wins:${score.win},Losses:${score.loss},Tie:${score.tie}`;
 
