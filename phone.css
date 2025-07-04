@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+.play-button img{
+    height: 15vw;
+}
+.play-button{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 60px;
+    border:2px solid white;
+    background-color: transparent;
+    margin:10px;
+}

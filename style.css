@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+p,button{
+    margin: 1rem;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1rem;
+}
+.play-button img{
+    height: 50px;
+}
+.play-button{
+    height: 120px;
+    width: 120px;;
+    border-radius: 60px;
+    border:2px solid white;
+    background-color: transparent;
+    margin:10px;
+}
+#result,#score{
+    font-size: 20px;
+    font-size: bold;
+}
+#choices img{
+    height: 30px;
+}
+.btn{
+    height: 30px;
+    font-weight: bold;
+}
