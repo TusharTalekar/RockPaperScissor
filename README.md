@@ -55,12 +55,12 @@ A classic game of Rock Paper Scissors built with **HTML**, **CSS**, and **JavaSc
 
 ## 📂 Project Structure
 
-.
-├── index.html
-├── help.html
-├── style.css
-├── phone.css
-└── help.css
+.<br>
+├── index.html<br>
+├── help.html<br>
+├── style.css<br>
+├── phone.css<br>
+└── help.css<br>
 
 
 
